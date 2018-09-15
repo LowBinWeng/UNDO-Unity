@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
         this.transform.Translate(Vector3.up * 100f * Time.deltaTime);
  		Death();        
 		Jump();
-
+        Roll();
 	}
 
     void Jump()
@@ -27,5 +27,10 @@ public class Player : MonoBehaviour {
 	void Death()
     {
         Destroy(this.gameObject);
+    }
+
+    void Roll()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) this.transform.Translate(1, 0, 0);
     }
 }
