@@ -21,4 +21,12 @@ public class Player : MonoBehaviour {
     {
         Destroy(this.gameObject);
     }
+
+    void Duplicate()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Instantiate(player);
+                }
+    }
 }
