@@ -12,5 +12,12 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         this.transform.Translate(Vector3.up * 100f * Time.deltaTime);
+        Jump();
+
 	}
+
+    void Jump()
+    {
+        GetComponent<Rigidbody2D>().AddForce(Vector3.up * 100f);
+    }
 }
